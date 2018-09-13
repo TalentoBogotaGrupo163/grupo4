@@ -1,0 +1,9 @@
+En el modelo de datos, tenemos definidas a la fecha 7 tablas en las que
+se almacenará la información del proyecto:
+1. Curso
+2. Usuario
+3. Entidad
+4. localizacion
+5. matricula
+6. calificacion
+7. asistencia
