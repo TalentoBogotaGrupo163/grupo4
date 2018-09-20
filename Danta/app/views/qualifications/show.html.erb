@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inscriptions:</strong>
+  <%= @qualification.inscriptions %>
+</p>
+
+<p>
+  <strong>Qualifications:</strong>
+  <%= @qualification.qualifications %>
+</p>
+
+<%= link_to 'Edit', edit_qualification_path(@qualification) %> |
+<%= link_to 'Back', qualifications_path %>

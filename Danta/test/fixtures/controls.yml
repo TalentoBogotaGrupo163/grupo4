@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inscriptions: one
+  date: 2018-09-17
+  assist: false
+
+two:
+  inscriptions: two
+  date: 2018-09-17
+  assist: false

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  initial_date: 2018-09-17
+  final_date: 2018-09-17
+  cost: 1
+  locations: one
+  entities: one
+  people: one
+
+two:
+  name: MyString
+  description: MyString
+  initial_date: 2018-09-17
+  final_date: 2018-09-17
+  cost: 1
+  locations: two
+  entities: two
+  people: two

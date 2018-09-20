@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inscriptions:</strong>
+  <%= @control.inscriptions %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @control.date %>
+</p>
+
+<p>
+  <strong>Assist:</strong>
+  <%= @control.assist %>
+</p>
+
+<%= link_to 'Edit', edit_control_path(@control) %> |
+<%= link_to 'Back', controls_path %>
