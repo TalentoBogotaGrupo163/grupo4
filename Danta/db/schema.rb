@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180920011640) do
+ActiveRecord::Schema.define(version: 20180921003314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(version: 20180920011640) do
   end
 
   create_table "controls", force: :cascade do |t|
-    t.bigint "inscriptions_id"
     t.date "date"
     t.boolean "assist"
+    t.bigint "inscription_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["inscriptions_id"], name: "index_controls_on_inscriptions_id"
+    t.index ["inscription_id"], name: "index_controls_on_inscription_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -49,14 +49,14 @@ ActiveRecord::Schema.define(version: 20180920011640) do
     t.date "initial_date"
     t.date "final_date"
     t.integer "cost"
-    t.bigint "locations_id"
-    t.bigint "entities_id"
-    t.bigint "people_id"
+    t.bigint "location_id"
+    t.bigint "entity_id"
+    t.bigint "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["entities_id"], name: "index_courses_on_entities_id"
-    t.index ["locations_id"], name: "index_courses_on_locations_id"
-    t.index ["people_id"], name: "index_courses_on_people_id"
+    t.index ["entity_id"], name: "index_courses_on_entity_id"
+    t.index ["location_id"], name: "index_courses_on_location_id"
+    t.index ["person_id"], name: "index_courses_on_person_id"
   end
 
   create_table "entities", force: :cascade do |t|
@@ -64,22 +64,21 @@ ActiveRecord::Schema.define(version: 20180920011640) do
     t.string "name"
     t.string "address"
     t.string "phone"
-    t.string "email"
     t.string "website"
-    t.bigint "locations_id"
+    t.bigint "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["locations_id"], name: "index_entities_on_locations_id"
+    t.index ["location_id"], name: "index_entities_on_location_id"
   end
 
   create_table "inscriptions", force: :cascade do |t|
-    t.bigint "courses_id"
-    t.bigint "people_id"
     t.integer "attendant"
+    t.bigint "course_id"
+    t.bigint "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["courses_id"], name: "index_inscriptions_on_courses_id"
-    t.index ["people_id"], name: "index_inscriptions_on_people_id"
+    t.index ["course_id"], name: "index_inscriptions_on_course_id"
+    t.index ["person_id"], name: "index_inscriptions_on_person_id"
   end
 
   create_table "inscriptions_people", id: false, force: :cascade do |t|
@@ -116,21 +115,19 @@ ActiveRecord::Schema.define(version: 20180920011640) do
   end
 
   create_table "qualifications", force: :cascade do |t|
-    t.bigint "inscriptions_id"
-    t.bigint "qualifications_id"
+    t.integer "qualification"
+    t.bigint "inscription_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["inscriptions_id"], name: "index_qualifications_on_inscriptions_id"
-    t.index ["qualifications_id"], name: "index_qualifications_on_qualifications_id"
+    t.index ["inscription_id"], name: "index_qualifications_on_inscription_id"
   end
 
-  add_foreign_key "controls", "inscriptions", column: "inscriptions_id"
-  add_foreign_key "courses", "entities", column: "entities_id"
-  add_foreign_key "courses", "locations", column: "locations_id"
-  add_foreign_key "courses", "people", column: "people_id"
-  add_foreign_key "entities", "locations", column: "locations_id"
-  add_foreign_key "inscriptions", "courses", column: "courses_id"
-  add_foreign_key "inscriptions", "people", column: "people_id"
-  add_foreign_key "qualifications", "inscriptions", column: "inscriptions_id"
-  add_foreign_key "qualifications", "qualifications", column: "qualifications_id"
+  add_foreign_key "controls", "inscriptions"
+  add_foreign_key "courses", "entities"
+  add_foreign_key "courses", "locations"
+  add_foreign_key "courses", "people"
+  add_foreign_key "entities", "locations"
+  add_foreign_key "inscriptions", "courses"
+  add_foreign_key "inscriptions", "people"
+  add_foreign_key "qualifications", "inscriptions"
 end

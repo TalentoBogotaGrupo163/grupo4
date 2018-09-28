@@ -1,4 +1,4 @@
 class Inscription < ApplicationRecord
-  belongs_to :courses
-  belongs_to :people
+  belongs_to :course
+  belongs_to :person
 end

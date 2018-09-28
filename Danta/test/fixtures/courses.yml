@@ -3,19 +3,19 @@
 one:
   name: MyString
   description: MyString
-  initial_date: 2018-09-17
-  final_date: 2018-09-17
+  initial_date: 2018-09-20
+  final_date: 2018-09-20
   cost: 1
-  locations: one
-  entities: one
-  people: one
+  location: one
+  entity: one
+  person: one
 
 two:
   name: MyString
   description: MyString
-  initial_date: 2018-09-17
-  final_date: 2018-09-17
+  initial_date: 2018-09-20
+  final_date: 2018-09-20
   cost: 1
-  locations: two
-  entities: two
-  people: two
+  location: two
+  entity: two
+  person: two

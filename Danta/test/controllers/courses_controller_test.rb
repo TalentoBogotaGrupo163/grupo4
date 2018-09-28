@@ -17,7 +17,7 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create course" do
     assert_difference('Course.count') do
-      post courses_url, params: { course: { cost: @course.cost, description: @course.description, entities_id: @course.entities_id, final_date: @course.final_date, initial_date: @course.initial_date, locations_id: @course.locations_id, name: @course.name, people_id: @course.people_id } }
+      post courses_url, params: { course: { cost: @course.cost, description: @course.description, entity_id: @course.entity_id, final_date: @course.final_date, initial_date: @course.initial_date, location_id: @course.location_id, name: @course.name, person_id: @course.person_id } }
     end
 
     assert_redirected_to course_url(Course.last)
@@ -34,7 +34,7 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update course" do
-    patch course_url(@course), params: { course: { cost: @course.cost, description: @course.description, entities_id: @course.entities_id, final_date: @course.final_date, initial_date: @course.initial_date, locations_id: @course.locations_id, name: @course.name, people_id: @course.people_id } }
+    patch course_url(@course), params: { course: { cost: @course.cost, description: @course.description, entity_id: @course.entity_id, final_date: @course.final_date, initial_date: @course.initial_date, location_id: @course.location_id, name: @course.name, person_id: @course.person_id } }
     assert_redirected_to course_url(@course)
   end
 

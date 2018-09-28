@@ -5,15 +5,13 @@ one:
   name: MyString
   address: MyString
   phone: MyString
-  email: MyString
   website: MyString
-  locations: one
+  location: one
 
 two:
   identification: MyString
   name: MyString
   address: MyString
   phone: MyString
-  email: MyString
   website: MyString
-  locations: two
+  location: two

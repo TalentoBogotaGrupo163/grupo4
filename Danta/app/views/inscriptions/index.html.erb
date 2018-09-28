@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Courses</th>
-      <th>People</th>
       <th>Attendant</th>
+      <th>Course</th>
+      <th>Person</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
   <tbody>
     <% @inscriptions.each do |inscription| %>
       <tr>
-        <td><%= inscription.courses %></td>
-        <td><%= inscription.people %></td>
         <td><%= inscription.attendant %></td>
+        <td><%= inscription.course.name %></td>
+        <td><%= inscription.person.name %></td>
         <td><%= link_to 'Show', inscription %></td>
         <td><%= link_to 'Edit', edit_inscription_path(inscription) %></td>
         <td><%= link_to 'Destroy', inscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>

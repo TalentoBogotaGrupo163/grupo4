@@ -9,9 +9,8 @@
       <th>Name</th>
       <th>Address</th>
       <th>Phone</th>
-      <th>Email</th>
       <th>Website</th>
-      <th>Locations</th>
+      <th>Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,9 +22,8 @@
         <td><%= entity.name %></td>
         <td><%= entity.address %></td>
         <td><%= entity.phone %></td>
-        <td><%= entity.email %></td>
         <td><%= entity.website %></td>
-        <td><%= entity.locations %></td>
+        <td><%= entity.location.neighborhood %> - <%= entity.location.zone %></td>
         <td><%= link_to 'Show', entity %></td>
         <td><%= link_to 'Edit', edit_entity_path(entity) %></td>
         <td><%= link_to 'Destroy', entity, method: :delete, data: { confirm: 'Are you sure?' } %></td>

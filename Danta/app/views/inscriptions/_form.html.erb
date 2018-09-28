@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :courses_id %>
-    <%= form.text_field :courses_id, id: :inscription_courses_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :people_id %>
-    <%= form.text_field :people_id, id: :inscription_people_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :attendant %>
     <%= form.number_field :attendant, id: :inscription_attendant %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course_id %>
+    <%= form.text_field :course_id, id: :inscription_course_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :person_id %>
+    <%= form.text_field :person_id, id: :inscription_person_id %>
   </div>
 
   <div class="actions">

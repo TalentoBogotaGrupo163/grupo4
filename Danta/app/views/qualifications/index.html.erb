@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Inscriptions</th>
-      <th>Qualifications</th>
+      <th>Qualification</th>
+      <th>Inscription</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @qualifications.each do |qualification| %>
       <tr>
-        <td><%= qualification.inscriptions %></td>
-        <td><%= qualification.qualifications %></td>
+        <td><%= qualification.qualification %></td>
+        <td><%= qualification.inscription %></td>
         <td><%= link_to 'Show', qualification %></td>
         <td><%= link_to 'Edit', edit_qualification_path(qualification) %></td>
         <td><%= link_to 'Destroy', qualification, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  inscriptions: one
-  qualifications: one
+  qualification: 1
+  inscription: one
 
 two:
-  inscriptions: two
-  qualifications: two
+  qualification: 1
+  inscription: two

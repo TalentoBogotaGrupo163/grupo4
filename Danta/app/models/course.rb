@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  belongs_to :locations
-  belongs_to :entities
-  belongs_to :people
+  belongs_to :location
+  belongs_to :entity
+  belongs_to :person
 end

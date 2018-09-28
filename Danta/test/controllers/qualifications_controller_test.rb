@@ -17,7 +17,7 @@ class QualificationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create qualification" do
     assert_difference('Qualification.count') do
-      post qualifications_url, params: { qualification: { inscriptions_id: @qualification.inscriptions_id, qualifications_id: @qualification.qualifications_id } }
+      post qualifications_url, params: { qualification: { inscription_id: @qualification.inscription_id, qualification: @qualification.qualification } }
     end
 
     assert_redirected_to qualification_url(Qualification.last)
@@ -34,7 +34,7 @@ class QualificationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update qualification" do
-    patch qualification_url(@qualification), params: { qualification: { inscriptions_id: @qualification.inscriptions_id, qualifications_id: @qualification.qualifications_id } }
+    patch qualification_url(@qualification), params: { qualification: { inscription_id: @qualification.inscription_id, qualification: @qualification.qualification } }
     assert_redirected_to qualification_url(@qualification)
   end
 

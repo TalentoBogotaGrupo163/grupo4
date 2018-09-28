@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Inscriptions</th>
       <th>Date</th>
       <th>Assist</th>
+      <th>Inscription</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
   <tbody>
     <% @controls.each do |control| %>
       <tr>
-        <td><%= control.inscriptions %></td>
         <td><%= control.date %></td>
         <td><%= control.assist %></td>
+        <td><%= control.inscription %></td>
         <td><%= link_to 'Show', control %></td>
         <td><%= link_to 'Edit', edit_control_path(control) %></td>
         <td><%= link_to 'Destroy', control, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Inscriptions:</strong>
-  <%= @control.inscriptions %>
-</p>
-
-<p>
   <strong>Date:</strong>
   <%= @control.date %>
 </p>
@@ -13,6 +8,11 @@
 <p>
   <strong>Assist:</strong>
   <%= @control.assist %>
+</p>
+
+<p>
+  <strong>Inscription:</strong>
+  <%= @control.inscription %>
 </p>
 
 <%= link_to 'Edit', edit_control_path(@control) %> |

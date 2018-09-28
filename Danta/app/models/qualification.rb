@@ -1,4 +1,3 @@
 class Qualification < ApplicationRecord
-  belongs_to :inscriptions
-  belongs_to :qualifications
+  belongs_to :inscription
 end

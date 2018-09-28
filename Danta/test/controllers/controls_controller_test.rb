@@ -17,7 +17,7 @@ class ControlsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create control" do
     assert_difference('Control.count') do
-      post controls_url, params: { control: { assist: @control.assist, date: @control.date, inscriptions_id: @control.inscriptions_id } }
+      post controls_url, params: { control: { assist: @control.assist, date: @control.date, inscription_id: @control.inscription_id } }
     end
 
     assert_redirected_to control_url(Control.last)
@@ -34,7 +34,7 @@ class ControlsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update control" do
-    patch control_url(@control), params: { control: { assist: @control.assist, date: @control.date, inscriptions_id: @control.inscriptions_id } }
+    patch control_url(@control), params: { control: { assist: @control.assist, date: @control.date, inscription_id: @control.inscription_id } }
     assert_redirected_to control_url(@control)
   end
 

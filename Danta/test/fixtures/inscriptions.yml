@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  courses: one
-  people: one
   attendant: 1
+  course: one
+  person: one
 
 two:
-  courses: two
-  people: two
   attendant: 1
+  course: two
+  person: two

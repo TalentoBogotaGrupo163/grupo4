@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :inscriptions_id %>
-    <%= form.text_field :inscriptions_id, id: :control_inscriptions_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :date %>
     <%= form.date_select :date, id: :control_date %>
   </div>
@@ -24,6 +19,11 @@
   <div class="field">
     <%= form.label :assist %>
     <%= form.check_box :assist, id: :control_assist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inscription_id %>
+    <%= form.text_field :inscription_id, id: :control_inscription_id %>
   </div>
 
   <div class="actions">

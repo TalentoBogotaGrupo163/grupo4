@@ -1,0 +1,11 @@
+Pendintes 
+Cuando se gurdan personas siempre pide logueo y no guarda la persona complet...toca editarlo 
+No hay relacion con la localidad toca digitar 1
+No permite crear segundo ragistro people
+relciones courses (Locations, entities, people)
+inscriptions - relacion ()course, person
+Qualifications - relacion (Inscription)
+classifications - no permite crear
+
+
+rails gerenate controller home index

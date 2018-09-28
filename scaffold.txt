@@ -1,0 +1,8 @@
+rails generate scaffold Entity identification:string name:string address:string phone:string website:string location:references 
+rails generate scaffold Course name:string description:string initial_date:date final_date:date cost:integer location:references entity:references person:references
+rails generate scaffold Inscription attendant:integer course:references person:references
+rails generate scaffold Control date:date assist:boolean inscription:references
+rails generate scaffold Qualification qualification:integer inscription:references
+rails generate scaffold Person identification:string name:string address:string phone:string age:integer curriculum_vitae:string
+rails generate scaffold Classification description:string type:integer
+rails generate scaffold Location zone:string neighborhood:string municipality:string department:string 

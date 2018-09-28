@@ -1,3 +1,3 @@
 class Control < ApplicationRecord
-  belongs_to :inscriptions
+  belongs_to :inscription
 end

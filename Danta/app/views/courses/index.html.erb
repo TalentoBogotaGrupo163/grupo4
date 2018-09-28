@@ -10,9 +10,9 @@
       <th>Initial date</th>
       <th>Final date</th>
       <th>Cost</th>
-      <th>Locations</th>
-      <th>Entities</th>
-      <th>People</th>
+      <th>Location</th>
+      <th>Entity</th>
+      <th>Person</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,9 +25,9 @@
         <td><%= course.initial_date %></td>
         <td><%= course.final_date %></td>
         <td><%= course.cost %></td>
-        <td><%= course.locations %></td>
-        <td><%= course.entities %></td>
-        <td><%= course.people %></td>
+        <td><%= course.location.neighborhood %> - <%= course.location.zone %></td>
+        <td><%= course.entity.name %></td>
+        <td><%= course.person.name %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
