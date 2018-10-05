@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :inscriptions
   resources :courses
   resources :entities
-  devise_for :people
+  ##devise_for :people
   resources :classifications
   resources :people
   resources :locations

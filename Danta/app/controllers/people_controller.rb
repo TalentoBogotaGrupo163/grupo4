@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
-  # skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
   # GET /people
   # GET /people.json
@@ -70,6 +70,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:identification, :name, :address, :phone, :email, :age, :curriculum_vitae)
+      params.require(:person).permit(:identification, :name, :address, :phone, :email, :age, :curriculum_vitae, :password)
     end
 end

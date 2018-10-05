@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180921003314) do
+ActiveRecord::Schema.define(version: 20181005014647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -122,6 +122,19 @@ ActiveRecord::Schema.define(version: 20180921003314) do
     t.index ["inscription_id"], name: "index_qualifications_on_inscription_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", null: false
+    t.string "encrypted_password", limit: 128, null: false
+    t.string "confirmation_token", limit: 128
+    t.string "remember_token", limit: 128, null: false
+    t.bigint "person_id"
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["person_id"], name: "index_users_on_person_id"
+    t.index ["remember_token"], name: "index_users_on_remember_token"
+  end
+
   add_foreign_key "controls", "inscriptions"
   add_foreign_key "courses", "entities"
   add_foreign_key "courses", "locations"
@@ -130,4 +143,5 @@ ActiveRecord::Schema.define(version: 20180921003314) do
   add_foreign_key "inscriptions", "courses"
   add_foreign_key "inscriptions", "people"
   add_foreign_key "qualifications", "inscriptions"
+  add_foreign_key "users", "people"
 end
